@@ -1,0 +1,35 @@
+.content__breadcrumbs {
+  margin-bottom: 20px;
+}
+
+.breadcrumbs__list {
+  font-size: 0;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+  margin-right: 5px;
+  &:after {
+    content: '>';
+    padding-left: 5px;
+    font-size: 12px;
+  }
+  &:last-child {
+    &:after {
+      content: '';
+    }
+  }
+}
+
+.breadcrumbs__link {
+  font-size: 14px;
+  font-family: 'open_sansregular';
+  color: #333;
+  &_active {
+    color: #f60;
+    text-decoration: underline;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}

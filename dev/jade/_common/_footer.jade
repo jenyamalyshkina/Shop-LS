@@ -1,0 +1,24 @@
+footer.footer
+  .container
+    .footer__content
+      .footer__logo.logo
+        a(href="/").logo__link
+          img(src="img/logo/logo-white.png", alt="COOLTECH").logo__img
+          span.logo__text Интернет-магазин COOLTECH
+      .footer__social.social
+        +socialButtons("big", [{
+          'class': 'fb',
+          'href': 'https://www.facebook.com/',
+          'text': 'facebook.com'
+          }, {
+          'class': 'vk',
+          'href': 'https://www.vk.com',
+          'text': 'vkontakte.com'
+          }, {
+          'class': 'tw',
+          'href': 'https://www.twitter.com',
+          'text': 'twitter.com'
+        }])
+      .footer__menu.menu
+        +navMenu("menu_bottom", ["Планшеты", "Мобильные телефоны", "Мр3-плееры", "Персональные компьютеры", "Ноутбуки", "Аксессуары", "Бытовая техника"], 1)
+  .footer__copyright All rights reserved. 2015. no copy alowed

@@ -1,0 +1,35 @@
+.contacts
+  .container
+    .contacts__social.social
+      +socialButtons("small", [{
+        'class': 'fb',
+        'href': 'https://www.facebook.com/',
+        'text': 'facebook.com'
+        }, {
+        'class': 'vk',
+        'href': 'https://www.vk.com',
+        'text': 'vkontakte.com'
+        }, {
+        'class': 'tw',
+        'href': 'https://www.twitter.com',
+        'text': 'twitter.com'
+      }])
+    .contacts__map.map
+      a(href="https://goo.gl/maps/ggHPch3zzBq" class='map__link' target='_blank') ул. Маяковская 6, офис 17
+    .contacts__phone.phone
+      a(href="tel://+7 (921) 123-12-13" class='phone__link') +7 (921) 123-12-13
+header.header
+  .container
+    .header__logo.logo
+      a(href="/").logo__link
+        img(src="img/logo/logo-orange.png", alt="COOLTECH").logo__img
+        h1.logo__text Интернет-магазин COOLTECH
+    form.header__search.search
+      input(type="text" placeholder="Что будем искать").search__input
+      button(type="submit").search__button Найти
+    .header__info.info
+      +navMenu("info", ["Карта проезда", "История заказов", "Корзина"])
+nav.nav
+    .container
+      .nav__menu.menu
+        +navMenu("menu_top", ["Планшеты", "Мобильные телефоны", "Мр3-плееры", "Персональные компьютеры", "Ноутбуки", "Аксессуары", "Бытовая техника"], 1)
