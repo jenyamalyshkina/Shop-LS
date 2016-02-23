@@ -1,5 +1,6 @@
 .content__filters {
   width: 333px;
+  float: left;
 }
 
 .filters__price-level-filter {
@@ -42,7 +43,6 @@
 .basic-filters__link-trigger {
   position: relative;
   display: block;
-  margin-bottom: 20px;
   font-family: 'open_sanssemibold';
   color: #333;
   font-size: 16px;
@@ -63,6 +63,11 @@
     bottom: 5px;
     @include sprite($big-arrow-down);
 }
+
+.accordeon__inner {
+  margin-top: 15px;
+}
+
 
 .availability__item:last-child {
   margin-bottom: 0;
@@ -171,6 +176,7 @@
   &__slider {
     width: 273px;
     height: 3px;
+    margin: 20px 0 10px;
     background-color: #dee1e4;
     border: 0;
     cursor: pointer;

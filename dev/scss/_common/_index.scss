@@ -1,0 +1,350 @@
+.content__main {
+  float: right;
+  margin-bottom: 66px;
+}
+
+.main {
+  width: 744px;
+}
+
+// Стили для вида table
+.table {
+  &.product {
+    font-size: 0;
+    &__item {
+      display: inline-block;
+      vertical-align: top;
+      width: 235px;
+      min-height: 513px;
+      margin-right: 19px;
+      margin-bottom: 17px;
+      padding: 20px 10px;
+      font-size: 14px;
+      font-family: 'open_sansregular';
+      text-align: center;
+      background: #fbfbfb;
+      border: 1px solid #dee1e4;
+      @include border-radius(5px);
+      @include box-sizing;
+      @include clearfix;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:hover {
+        box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
+      }
+      &:active {
+        box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
+      }
+    }
+  }
+  &.item {
+    &__image {
+      margin: 0 auto 10px;
+    }
+    &__name {
+      min-height: 30px;
+      margin-bottom: 7px;
+    }
+    &__charact {
+       margin-bottom: 7px;
+      .charact__line { @include clearfix; }
+      .charact__line:nth-child(odd) {
+        background: #e6e6e6;
+      }
+      .line__text_left {
+        float: left;
+      }
+      .line__text_right {
+        float: right;
+      }
+    }
+    &__addtobasket {
+      float: right;
+    }
+    &__presence {
+      float: left;
+      width: 80px;
+      line-height: 33px;
+    }
+    &__info {
+      display: none;
+    }
+    &__ratio {
+      margin-bottom: 10px;
+    }
+    &__price {
+      margin-bottom: 7px;
+    }
+    &__articul {
+      display: none;
+    }
+  }
+}
+
+// Стили для вида piclist
+.piclist {
+  overflow: hidden;
+  &.product {
+    border: 1px solid #dee1e4;
+    @include border-radius(5px);
+    &__item {
+      position: relative;
+      min-height: 245px;
+      padding: 18px 24px;
+      font-size: 14px;
+      font-family: 'open_sansregular';
+      background: #fbfbfb;
+      border-bottom: 1px solid #dee1e4;
+      &:last-child {
+        border-bottom: none;
+      }
+      @include box-sizing;
+      @include clearfix;
+      &:hover {
+        box-shadow: 0 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
+      }
+      &:active {
+        box-shadow: 0 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
+      }
+    }
+  }
+  &.item {
+    &__image {
+      margin-bottom: 11px;
+    }
+    &__name {
+      display: block;
+      position: absolute;
+      top: 19px;
+      left: 188px;
+    }
+    &__charact {
+      display: none;
+    }
+    &__addtobasket {
+      display: block;
+      position: absolute;
+      bottom: 40px;
+      right: 25px;
+    }
+    &__presence {
+      position: relative;
+      float: right;
+      width: 73px;
+      text-align: right;
+      &:after {
+        display: block;
+        position: absolute;
+        content: '';
+        right: 127px;
+        top: -200px;
+        width: 1px;
+        height: 203px;
+        background-color: #dee1e4;
+      }
+    }
+    &__info {
+      display: block;
+      position: absolute;
+      top: 71px;
+      left: 188px;
+      width: 376px;
+    }
+    &__ratio {
+      display: block;
+      position: absolute;
+      top: 160px;
+      left: 188px;
+    }
+    &__price {
+      display: block;
+      position: absolute;
+      top: 27px;
+      right: 25px;
+    }
+    &__articul {
+      display: block;
+      position: absolute;
+      bottom: 15px;
+      left: 35px;
+    }
+  }
+}
+
+// Стили для вида list
+.list {
+  overflow: hidden;
+  &.product {
+    border: 1px solid #dee1e4;
+    @include border-radius(5px);
+    &__item {
+      position: relative;
+      height: 51px;
+      padding: 0 11px;
+      background: #fbfbfb;
+      font-size: 14px;
+      font-family: 'open_sansregular';
+      border-bottom: 1px solid #dee1e4;
+      &:last-child {
+        border-bottom: none;
+      }
+      @include box-sizing;
+      &:hover {
+        box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
+      }
+      &:active {
+        box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
+      }
+    }
+  }
+  &.item {
+    &__image {
+      display: none;
+    }
+    &__name {
+      display: none;
+    }
+    &__charact {
+      display: none;
+    }
+    &__addtobasket {
+      @include vertical-center;
+      right: 11px;
+    }
+    &__presence {
+      @include vertical-center;
+      right: 135px;
+      width: 73px;
+      text-align: right;
+    }
+    &__info {
+      @include vertical-center;
+      left: 127px;
+      max-width: 287px;
+      overflow:hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    &__ratio {
+      display: none;
+    }
+    &__price {
+      @include vertical-center;
+      right: 244px;
+    }
+    &__articul {
+      font-size: 0;
+      @include vertical-center;
+    }
+  }
+}
+
+.name {
+  font-family: 'open_sanssemibold';
+  line-height: 20px;
+}
+
+.price {
+  font-size: 20px;
+  &__value {
+    font-family: 'open_sanssemibold';
+  }
+  &__ruble {
+    font-family: 'als_rublregular';
+  }
+}
+
+.addtobasket {
+  width: 103px;
+  height: 33px;
+  background-color: #f60;
+  @include border-radius(5px);
+  color: white;
+  font-family: 'open_sansbold';
+  border: none;
+  &:hover {
+    background: lighten(#f60, 5%);
+  }
+}
+
+.presence {
+  position: relative;
+  padding-left: 7px;
+  font-family: 'open_sansbold';
+  font-size: 12px;
+  color: #7f7f7f;
+  &:before {
+    display: block;
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: #60ac49;
+    @include border-radius(50%);
+    @include vertical-center;
+    left: 0;
+  }
+}
+
+.articul {
+  font-size: 20px;
+  &__text {
+    display: inline-block;
+    font-family: 'open_sansbold';
+    color: #7f7f7f;
+    font-size: 12px;
+    margin-right: 3px;
+  }
+  &__value {
+    display: inline-block;
+    font-family: 'open_sanssemibold';
+    color: #333;
+    font-size: 14px;
+  }
+}
+
+.info {
+  text-align: left;
+}
+
+.image {
+  width: 138px;
+  &__big {
+    width: 136px;
+    height: 136px;
+    background-color: white;
+    border: 1px solid #dee1e4;
+    border-radius: 2px;
+    margin: 0 auto 14px;
+    position: relative;
+    cursor: pointer;
+    &-pic {
+        display: block;
+        @include absolute-center;
+    }
+  }
+  &__item {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background-color: white;
+    border: 1px solid #dee1e4;
+    border-radius: 2px;
+    margin-left: 11px;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid #f60;
+    }
+    &-pic {
+      display: block;
+      @include absolute-center;
+    }
+    &:first-child {
+        margin-left: 0;
+    }
+  }
+}
+
+
+

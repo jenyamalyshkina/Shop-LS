@@ -9,7 +9,7 @@ aside.content__filters.filters
     ul.basic-filters
       li.basic-filters__item
         a(href="#").basic-filters__link-trigger Наличие в магазинах
-        ul.availability
+        ul.availability.accordeon__inner
           li.availability__item
             input(type="radio" id="allshops" name="availability" checked).radio-input
             label(for="allshops").radio-label Во всех магазинах
@@ -18,21 +18,31 @@ aside.content__filters.filters
             label(for="nearshop").radio-label В ближайшем ко мне магазине
       li.basic-filters__item
         a(href="#").basic-filters__link-trigger Бренды
-        +checkbox('brand', ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola'])
-        a(href="#").reset-filter Сбросить фильтр
+        ul.accordeon__inner
+          li.accordeon__inner-item
+            +checkbox('brand', ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola'])
+          li.accordeon__inner-item
+            a(href="#").reset-filter Сбросить фильтр
       li.basic-filters__item
         .price-range
           a(href="#").basic-filters__link-trigger Цена
-          p.price-range__box
-            span.price-range__text от
-            input(type="text" id="price-range__amount1").price-range__field
-            span.price-range__text до
-            input(type="text" id="price-range__amount2").price-range__field
-            div.price-range__slider
+          ul.price-range__box.accordeon__inner
+            li.accordeon__inner-item
+              span.price-range__text от
+              input(type="text" id="price-range__amount1").price-range__field
+              span.price-range__text до
+              input(type="text" id="price-range__amount2").price-range__field
+            li.accordeon__inner-item
+              .price-range__slider
       li.basic-filters__item
         a(href="#").basic-filters__link-trigger Цвет
-        +colorFilter(['white', 'gray', 'black', 'blue', 'red', 'yellow', 'orange', 'green', 'skyblue', 'violet', 'pink', 'brown'])
+        ul.accordeon__inner
+          li.accordeon__inner-item
+            +colorFilter(['white', 'gray', 'black', 'blue', 'red', 'yellow', 'orange', 'green', 'skyblue', 'violet', 'pink', 'brown'])
       li.basic-filters__item
-        a(href="#").basic-filters__link-trigger Операционная система
-        +checkbox('os', ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom'])
-        a(href="#").reset-filter Сбросить фильтр
+          a(href="#").basic-filters__link-trigger Операционная система
+          ul.accordeon__inner
+            li.accordeon__inner-item
+              +checkbox('os', ['Android', 'iOS', 'Windows', 'Symbian', 'Custom'])
+            li.accordeon__inner-item
+              a(href="#").reset-filter Сбросить фильтр

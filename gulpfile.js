@@ -38,11 +38,11 @@ gulp.task('sass-compile', function () {
 
 // Минимификация и конкатенация файлов .js
 gulp.task('min-js', function() {
-  return gulp.src(['bower/jquery/dist/jquery.js','bower/jquery.columnizer/src/jquery.columnizer.js', 'bower/jquery-ui/jquery-ui.js', 'dev/js/**/*.js'])
+  return gulp.src(['bower/jquery/dist/jquery.js', 'bower/jquery-ui/jquery-ui.js', 'bower/jquery.columnizer/src/jquery.columnizer.js', 'bower/selectize/dist/js/standalone/selectize.js', 'dev/js/**/*.js'])
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(concat('main.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('prod/js/'));
 });

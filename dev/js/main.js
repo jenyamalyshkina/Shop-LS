@@ -9,22 +9,62 @@
 // Прослушиваем события
     var _setUpListener = function () {
       $('.reset-filter').on('click', _resetFilter)
+      $('.catalog-view__link_piclist').on('click', _viewPiclist)
+      $('.catalog-view__link_table').on('click', _viewTable)
+      $('.catalog-view__link_list').on('click', _viewList)
     };
 
+// Переключаем отображение контента
+var _viewPiclist = function(event) {
+  event.preventDefault();
+  $('.active').removeClass('active');
+  $(this).addClass('active');
+  $('.table').removeClass('table').addClass('piclist');
+  $('.list').removeClass('list').addClass('piclist');
+}
 
-// Иконка при наведении на ссылку-триггер
-    $('.basic-filters__link-trigger').hover(function() {
-      $(this).prepend('<i class="arrow-up"></i>')
-    }, function() {
-      $('.arrow-up').remove()
-    });
+var _viewTable = function(event) {
+  event.preventDefault();
+  $('.active').removeClass('active');
+  $(this).addClass('active');
+  $('.list').removeClass('list').addClass('table');
+  $('.piclist').removeClass('piclist').addClass('table');
+}
+
+var _viewList = function(event) {
+  event.preventDefault();
+  $('.active').removeClass('active');
+  $(this).addClass('active');
+  $('.table').removeClass('table').addClass('list');
+  $('.piclist').removeClass('piclist').addClass('list');
+}
+
+
+// Аккордеон
+var trigger = $('.basic-filters__link-trigger');
+
+trigger.prepend('<i class="arrow-up arrow"></i>');
+$('.arrow').hide();
+
+trigger.hover(function() {
+  $('.arrow',this).show()
+  },  function() {
+        $('.arrow',this).hide()
+      });
+
+trigger.click(function(e){
+  e.preventDefault();
+  $('.arrow',this).toggleClass('arrow-down');
+  $(this).next('.accordeon__inner').slideToggle(200);
+});
+
 
 
 // Сброс фильтров
 var _resetFilter = function(event) {
   event.preventDefault();
     $(this)
-      .siblings('ul')
+      .closest('ul')
       .find('input:checkbox')
       .removeAttr('checked');
 }
@@ -52,6 +92,11 @@ $(function() {
 
   });
 
+// Селект
+$('#select-field').selectize({
+  create: false,
+  sortField: 'text'
+});
 
 // Возвращаем объект (публичные методы)
   return {
@@ -61,4 +106,3 @@ $(function() {
 
 // Вызываем модуль
 myModule.init();
-
