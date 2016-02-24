@@ -14,6 +14,7 @@
       $('.catalog-view__link_list').on('click', _viewList)
       $('.image__item-link').on('click', _picSlide)
       $('.color__link').on('click', _prevent)
+      $('.price-level-filter__link').on('click', _prevent)
     };
 
 // Устанавливаем бордер выбранной картинке

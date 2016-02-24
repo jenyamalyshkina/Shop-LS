@@ -12,82 +12,82 @@
 }
 
 // Стили для вида table
-// .table {
-//   &.product {
-//     font-size: 0;
-//     &__item {
-//       display: inline-block;
-//       vertical-align: top;
-//       width: 235px;
-//       min-height: 513px;
-//       margin-right: 19px;
-//       margin-bottom: 17px;
-//       padding: 20px 10px;
-//       font-size: 14px;
-//       font-family: 'open_sansregular';
-//       text-align: center;
-//       background: #fbfbfb;
-//       border: 1px solid #dee1e4;
-//       @include border-radius(5px);
-//       @include box-sizing;
-//       @include clearfix;
-//       &:nth-child(3n) {
-//         margin-right: 0;
-//       }
-//       &:hover {
-//         box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
-//       }
-//       &:active {
-//         box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
-//       }
-//     }
-//   }
-//   &.item {
-//     &__image {
-//       margin: 0 auto 10px;
-//     }
-//     &__name {
-//       min-height: 30px;
-//       margin-bottom: 7px;
-//     }
-//     &__charact {
-//        margin-bottom: 7px;
-//       .charact__line { @include clearfix; height: 21px; }
-//       .charact__line:nth-child(odd) {
-//         background: #e6e6e6;
-//       }
-//       .line__text_left {
-//         float: left;
-//       }
-//       .line__text_right {
-//         float: right;
-//       }
-//     }
-//     &__addtobasket {
-//       float: right;
-//     }
-//     &__presence {
-//       float: left;
-//       width: 85px;
-//       line-height: 33px;
-//     }
-//     &__info {
-//       display: none;
-//     }
-//     &__ratio {
-//       margin-bottom: 10px;
-//     }
-//     &__price {
-//       margin-bottom: 7px;
-//     }
-//     &__articul {
-//       display: none;
-//     }
-//   }
-// }
+.table {
+  &.product {
+    font-size: 0;
+    &__item {
+      display: inline-block;
+      vertical-align: top;
+      width: 235px;
+      min-height: 513px;
+      margin-right: 19px;
+      margin-bottom: 17px;
+      padding: 20px 10px;
+      font-size: 14px;
+      font-family: 'open_sansregular';
+      text-align: center;
+      background: #fbfbfb;
+      border: 1px solid #dee1e4;
+      @include border-radius(5px);
+      @include box-sizing;
+      @include clearfix;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:hover {
+        box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
+      }
+      &:active {
+        box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
+      }
+    }
+  }
+  &.item {
+    &__image {
+      margin: 0 auto 10px;
+    }
+    &__name {
+      min-height: 30px;
+      margin-bottom: 7px;
+    }
+    &__charact {
+       margin-bottom: 7px;
+      .charact__line { @include clearfix; height: 21px; }
+      .charact__line:nth-child(odd) {
+        background: #e6e6e6;
+      }
+      .line__text_left {
+        float: left;
+      }
+      .line__text_right {
+        float: right;
+      }
+    }
+    &__addtobasket {
+      float: right;
+    }
+    &__presence {
+      float: left;
+      width: 85px;
+      line-height: 33px;
+    }
+    &__info {
+      display: none;
+    }
+    &__ratio {
+      margin-bottom: 10px;
+    }
+    &__price {
+      margin-bottom: 7px;
+    }
+    &__articul {
+      display: none;
+    }
+  }
+}
 
 // Стили для вида piclist
-.table {
+.piclist {
   overflow: hidden;
   &.product {
     border: 1px solid #dee1e4;
@@ -126,10 +126,6 @@
     }
     &__name {
       margin-bottom: 20px;
-      // display: block;
-      // position: absolute;
-      // top: 25px;
-      // left: 184px;
       font-size: 16px;
     }
     &__charact {
@@ -138,17 +134,7 @@
 
     &__info {
       margin-bottom: 16px;
-      // float: left;
       width: 376px;
-      // margin-top: 48px;
-      // margin-left: 21px;
-
-    }
-    &__ratio {
-      // display: block;
-      // position: absolute;
-      // top: 160px;
-      // left: 188px;
     }
     &__price {
       display: block;
@@ -409,29 +395,28 @@
 }
 
 .ratio {
-    &__list {
-        display: inline-block;
+  &__list {
+    display: inline-block;
+  }
+  &__star {
+    display: inline-block;
+    &-filled {
+        @include sprite($star-filled);
     }
-    &__star {
-        display: inline-block;
-        &-filled {
-            @include sprite($star-filled);
-        }
-        &-unfilled {
-            @include sprite($star-unfilled);
-        }
+    &-unfilled {
+        @include sprite($star-unfilled);
     }
-    &__number{
-        margin-left: 15px;
-        display: inline-block;
-        // height: 16px;
-        font-size: 12px;
-        vertical-align: top;
-        padding: 0 10px;
-        border-radius: 10px;
-        background: #b5beca;
-        color:white;
-    }
+  }
+  &__number{
+    margin-left: 15px;
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: top;
+    padding: 0 10px;
+    border-radius: 10px;
+    background: #b5beca;
+    color:white;
+  }
 }
 
 
