@@ -1,10 +1,14 @@
 .content__main {
   float: right;
-  margin-bottom: 66px;
+  margin-bottom: 33px;
 }
 
 .main {
   width: 744px;
+}
+
+.product {
+  margin-bottom: 60px;
 }
 
 // Стили для вида table
@@ -48,7 +52,7 @@
     }
     &__charact {
        margin-bottom: 7px;
-      .charact__line { @include clearfix; }
+      .charact__line { @include clearfix; height: 21px; }
       .charact__line:nth-child(odd) {
         background: #e6e6e6;
       }
@@ -101,6 +105,16 @@
       }
       @include box-sizing;
       @include clearfix;
+      &:after {
+        display: block;
+        position: absolute;
+        content: '';
+        right: 152px;
+        top: 20px;
+        width: 1px;
+        height: 203px;
+        background-color: #dee1e4;
+      }
       &:hover {
         box-shadow: 0 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
       }
@@ -129,25 +143,14 @@
       right: 25px;
     }
     &__presence {
-      position: relative;
       float: right;
       width: 73px;
       text-align: right;
-      &:after {
-        display: block;
-        position: absolute;
-        content: '';
-        right: 127px;
-        top: -200px;
-        width: 1px;
-        height: 203px;
-        background-color: #dee1e4;
-      }
     }
     &__info {
       display: block;
       position: absolute;
-      top: 71px;
+      top: 60px;
       left: 188px;
       width: 376px;
     }
@@ -333,18 +336,80 @@
     margin-left: 11px;
     position: relative;
     cursor: pointer;
-    &:hover {
+    &:hover, &.active {
       border: 1px solid #f60;
     }
     &-pic {
       display: block;
       @include absolute-center;
+      max-width: 32px;
+      max-height: 32px;
+    }
+    &-link {
+      display: block;
+      width: 34px;
+      height: 34px;
     }
     &:first-child {
         margin-left: 0;
     }
   }
 }
+
+.content__pagination {
+  float: right;
+}
+
+.pagination__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 26px;
+  height: 25px;
+  margin-left: 5px;
+  &:first-child {
+    margin-left: 0;
+  }
+  line-height: 25px;
+  background-color: #fbfbfb;
+  border: 1px solid #dee1e4;
+  @include border-radius(3px);
+  @include box-sizing;
+  font-family: 'open_sansbold';
+  font-size: 12px;
+  color: #7f7f7f;
+  text-align: center;
+  &:hover {
+    border: 1px solid #c8c8c8;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+  }
+  &_active {
+    border: 1px solid #c8c8c8;
+    background-color: #e0e0e0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+  }
+  &_prev:after {
+    display: block;
+    content: '';
+    @include absolute-center;
+    @include sprite($big-arrow-down);
+    transform: rotate(90deg) scale(0.4);
+    -webkit-filter: contrast(0) drop-shadow(1px 0 1px #333);
+  }
+  &_next:after {
+    display: block;
+    content: '';
+    @include absolute-center;
+    @include sprite($big-arrow-down);
+    transform: rotate(-90deg) scale(0.4);
+    -webkit-filter: contrast(0) drop-shadow(1px 0 1px #333);
+  }
+}
+
+
+
+
+
 
 
 

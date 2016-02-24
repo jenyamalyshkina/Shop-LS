@@ -31,20 +31,24 @@ mixin productItem(content)
       li.table.product__item
         .table.item__image.image
           .image__big
-            img(src="#{item.image}", alt="#{item.name}").image__big-pic
+            img(src="#{item.images.image1}", alt="#{item.name}").image__big-pic
           ul.image__list
             each value, key in item.images
               li.image__item
-                img(src="#{value}", alt="#{value}").image__item-pic
+                a(href="#").image__item-link
+                  img(src="#{value}", alt="#{value}").image__item-pic
         .table.item__articul.articul
           span.articul__text Артикул
           span.articul__value #{item.articul}
         .table.item__name.name #{item.name}
         ul.table.item__charact.charact
           each value, key in item.charact
-            li.charact__line
-              span.line__text_left #{key}
-              span.line__text_right #{value}
+            if (value)
+              li.charact__line
+                span.line__text_left #{key}
+                span.line__text_right #{value}
+            else
+              li.charact__line
         .table.item__ratio.ratio
           img(src="img/content/ratio-4.png", alt="ratio")
         .table.item__price.price
