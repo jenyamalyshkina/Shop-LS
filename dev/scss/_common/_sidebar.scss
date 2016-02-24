@@ -4,7 +4,7 @@
 }
 
 .filters__price-level-filter {
-  margin-bottom: 38px;
+  margin-bottom: 33px;
 }
 
 .price-level-filter, .basic-filters {
@@ -21,7 +21,7 @@
 
 .price-level-filter__link {
   display: block;
-  padding: 15px 30px;
+  padding: 15px 26px;
   color: #7f7f7f;
   &_active {
     background-color: #d9e5ea;
@@ -33,7 +33,7 @@
 }
 
 .basic-filters__item {
-  padding: 15px 15px 20px 30px;
+  padding: 10px 15px 20px 25px;
   border-bottom: 1px solid #dee1e4;
   &:last-child {
    border-bottom: none;
@@ -67,7 +67,6 @@
 .accordeon__inner {
   margin-top: 15px;
 }
-
 
 .availability__item:last-child {
   margin-bottom: 0;

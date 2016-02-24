@@ -55,7 +55,7 @@
 }
 
 .contacts__map {
-  right: 263px;
+  right: 267px;
 }
 
 .map__link, .phone__link {
@@ -80,7 +80,7 @@
   font-family: 'open_sanssemibold';
     &:before {
       content: '';
-      left: 0;
+      left: -1px;
       @include vertical-center();
       @include sprite($telephone);
     }
@@ -101,30 +101,34 @@
 }
 
 .search__input {
-  width: 287px;
-  line-height: 30px;
+  padding: 0;
+  margin: 0;
+  width: 289px;
+  height: 32px;
+  line-height: 32px;
   padding-left: 8px;
   outline: none;
   border: 1px solid #dee1e4;
   @include border-radius(3px);
+  @include box-sizing;
 }
 
 @include placeholder {
   padding-left: 8px;
   font-size: 14px;
-  line-height: 30px;
   font-family: 'open_sanslight';
   color: #7f7f7f;
 }
 
 .search__button {
-  height: 34px;
-  min-width: 80px;
+  padding: 0;
+  margin: 0;
+  height: 32px;
+  min-width: 79px;
   margin-left: -7px;
   border: none;
   background-color: #f60;
   font-size: 16px;
-  font-family: 'open_sanssemibold';
   color: white;
   @include border-radius(0 3px 3px 0);
 }
@@ -141,7 +145,7 @@
 
 .info__item {
   display: inline-block;
-  margin-left: 32px;
+  margin-left: 33px;
   &:first-child {
     margin-left: 0;
   }
@@ -161,7 +165,7 @@
   background: white;
   height: 52px;
   border-bottom: solid 2px #ebedef;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .menu_top__list, .menu_bottom__list {

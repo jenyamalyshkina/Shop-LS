@@ -12,82 +12,82 @@
 }
 
 // Стили для вида table
-.table {
-  &.product {
-    font-size: 0;
-    &__item {
-      display: inline-block;
-      vertical-align: top;
-      width: 235px;
-      min-height: 513px;
-      margin-right: 19px;
-      margin-bottom: 17px;
-      padding: 20px 10px;
-      font-size: 14px;
-      font-family: 'open_sansregular';
-      text-align: center;
-      background: #fbfbfb;
-      border: 1px solid #dee1e4;
-      @include border-radius(5px);
-      @include box-sizing;
-      @include clearfix;
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-      &:hover {
-        box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
-      }
-      &:active {
-        box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
-      }
-    }
-  }
-  &.item {
-    &__image {
-      margin: 0 auto 10px;
-    }
-    &__name {
-      min-height: 30px;
-      margin-bottom: 7px;
-    }
-    &__charact {
-       margin-bottom: 7px;
-      .charact__line { @include clearfix; height: 21px; }
-      .charact__line:nth-child(odd) {
-        background: #e6e6e6;
-      }
-      .line__text_left {
-        float: left;
-      }
-      .line__text_right {
-        float: right;
-      }
-    }
-    &__addtobasket {
-      float: right;
-    }
-    &__presence {
-      float: left;
-      width: 80px;
-      line-height: 33px;
-    }
-    &__info {
-      display: none;
-    }
-    &__ratio {
-      margin-bottom: 10px;
-    }
-    &__price {
-      margin-bottom: 7px;
-    }
-    &__articul {
-      display: none;
-    }
-  }
-}
+// .table {
+//   &.product {
+//     font-size: 0;
+//     &__item {
+//       display: inline-block;
+//       vertical-align: top;
+//       width: 235px;
+//       min-height: 513px;
+//       margin-right: 19px;
+//       margin-bottom: 17px;
+//       padding: 20px 10px;
+//       font-size: 14px;
+//       font-family: 'open_sansregular';
+//       text-align: center;
+//       background: #fbfbfb;
+//       border: 1px solid #dee1e4;
+//       @include border-radius(5px);
+//       @include box-sizing;
+//       @include clearfix;
+//       &:nth-child(3n) {
+//         margin-right: 0;
+//       }
+//       &:hover {
+//         box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
+//       }
+//       &:active {
+//         box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
+//       }
+//     }
+//   }
+//   &.item {
+//     &__image {
+//       margin: 0 auto 10px;
+//     }
+//     &__name {
+//       min-height: 30px;
+//       margin-bottom: 7px;
+//     }
+//     &__charact {
+//        margin-bottom: 7px;
+//       .charact__line { @include clearfix; height: 21px; }
+//       .charact__line:nth-child(odd) {
+//         background: #e6e6e6;
+//       }
+//       .line__text_left {
+//         float: left;
+//       }
+//       .line__text_right {
+//         float: right;
+//       }
+//     }
+//     &__addtobasket {
+//       float: right;
+//     }
+//     &__presence {
+//       float: left;
+//       width: 85px;
+//       line-height: 33px;
+//     }
+//     &__info {
+//       display: none;
+//     }
+//     &__ratio {
+//       margin-bottom: 10px;
+//     }
+//     &__price {
+//       margin-bottom: 7px;
+//     }
+//     &__articul {
+//       display: none;
+//     }
+//   }
+// }
 
 // Стили для вида piclist
-.piclist {
+.table {
   overflow: hidden;
   &.product {
     border: 1px solid #dee1e4;
@@ -105,16 +105,6 @@
       }
       @include box-sizing;
       @include clearfix;
-      &:after {
-        display: block;
-        position: absolute;
-        content: '';
-        right: 152px;
-        top: 20px;
-        width: 1px;
-        height: 203px;
-        background-color: #dee1e4;
-      }
       &:hover {
         box-shadow: 0 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
       }
@@ -125,16 +115,46 @@
   }
   &.item {
     &__image {
+      float: left;
       margin-bottom: 11px;
     }
+    &__box {
+      width: 405px;
+      margin-left: 160px;
+      padding-top: 10px;
+      border-right: 1px solid #dee1e4;
+    }
     &__name {
-      display: block;
-      position: absolute;
-      top: 19px;
-      left: 188px;
+      margin-bottom: 20px;
+      // display: block;
+      // position: absolute;
+      // top: 25px;
+      // left: 184px;
+      font-size: 16px;
     }
     &__charact {
       display: none;
+    }
+
+    &__info {
+      margin-bottom: 16px;
+      // float: left;
+      width: 376px;
+      // margin-top: 48px;
+      // margin-left: 21px;
+
+    }
+    &__ratio {
+      // display: block;
+      // position: absolute;
+      // top: 160px;
+      // left: 188px;
+    }
+    &__price {
+      display: block;
+      position: absolute;
+      top: 22px;
+      right: 25px;
     }
     &__addtobasket {
       display: block;
@@ -143,33 +163,15 @@
       right: 25px;
     }
     &__presence {
-      float: right;
-      width: 73px;
-      text-align: right;
-    }
-    &__info {
-      display: block;
+      display: inline-block;
       position: absolute;
-      top: 60px;
-      left: 188px;
-      width: 376px;
-    }
-    &__ratio {
-      display: block;
-      position: absolute;
-      top: 160px;
-      left: 188px;
-    }
-    &__price {
-      display: block;
-      position: absolute;
-      top: 27px;
+      bottom: 17px;
       right: 25px;
     }
     &__articul {
       display: block;
       position: absolute;
-      bottom: 15px;
+      top: 208px;
       left: 35px;
     }
   }
@@ -213,12 +215,12 @@
     }
     &__addtobasket {
       @include vertical-center;
-      right: 11px;
+      right: 13px;
     }
     &__presence {
       @include vertical-center;
-      right: 135px;
-      width: 73px;
+      right: 137px;
+      width: 85px;
       text-align: right;
     }
     &__info {
@@ -273,19 +275,19 @@
 
 .presence {
   position: relative;
-  padding-left: 7px;
   font-family: 'open_sansbold';
   font-size: 12px;
   color: #7f7f7f;
   &:before {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     content: '';
     width: 7px;
     height: 7px;
+    margin-right: 7px;
+    margin-bottom: 2px;
     background-color: #60ac49;
     @include border-radius(50%);
-    @include vertical-center;
-    left: 0;
   }
 }
 
@@ -406,7 +408,31 @@
   }
 }
 
-
+.ratio {
+    &__list {
+        display: inline-block;
+    }
+    &__star {
+        display: inline-block;
+        &-filled {
+            @include sprite($star-filled);
+        }
+        &-unfilled {
+            @include sprite($star-unfilled);
+        }
+    }
+    &__number{
+        margin-left: 15px;
+        display: inline-block;
+        // height: 16px;
+        font-size: 12px;
+        vertical-align: top;
+        padding: 0 10px;
+        border-radius: 10px;
+        background: #b5beca;
+        color:white;
+    }
+}
 
 
 

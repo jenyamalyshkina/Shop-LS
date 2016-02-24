@@ -13,11 +13,16 @@
       $('.catalog-view__link_table').on('click', _viewTable)
       $('.catalog-view__link_list').on('click', _viewList)
       $('.image__item-link').on('click', _picSlide)
+      $('.color__link').on('click', _prevent)
     };
 
 // Устанавливаем бордер выбранной картинке
 $('.image__list').find(':first-child').addClass('active');
 
+//Отключаем переход по ссылкам в цветах
+var _prevent = function(event) {
+  event.preventDefault();
+}
 
 // Переключаем изображения в слайдере
 var _picSlide = function(event) {

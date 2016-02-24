@@ -40,21 +40,28 @@ mixin productItem(content)
         .table.item__articul.articul
           span.articul__text Артикул
           span.articul__value #{item.articul}
-        .table.item__name.name #{item.name}
-        ul.table.item__charact.charact
-          each value, key in item.charact
-            if (value)
-              li.charact__line
-                span.line__text_left #{key}
-                span.line__text_right #{value}
-            else
-              li.charact__line
-        .table.item__ratio.ratio
-          img(src="img/content/ratio-4.png", alt="ratio")
+        .table.item__box
+          .table.item__name.name #{item.name}
+          ul.table.item__charact.charact
+            each value, key in item.charact
+              if (value)
+                li.charact__line
+                  span.line__text_left #{key}
+                  span.line__text_right #{value}
+              else
+                li.charact__line
+          .table.item__info.info.
+            #{item.info}
+          .table.item__ratio.ratio
+            ul.ratio__list
+              - for (var i = 0; i<5; i++)
+                if i < item.ratio
+                  li.ratio__star.ratio__star-filled
+                else
+                  li.ratio__star.ratio__star-unfilled
+            span.ratio__number #{item.ratio}
         .table.item__price.price
           span.price__value #{item.price}
           span.price__ruble p
         .table.item__presence.presence В наличии
-        .table.item__info.info.
-          #{item.info}
         button.table.item__addtobasket.addtobasket В корзину
