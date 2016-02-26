@@ -88,7 +88,6 @@
 
 // Стили для вида piclist
 .piclist {
-  overflow: hidden;
   &.product {
     border: 1px solid #dee1e4;
     @include border-radius(5px);
@@ -100,16 +99,22 @@
       font-family: 'open_sansregular';
       background: #fbfbfb;
       border-bottom: 1px solid #dee1e4;
+      &:first-child {
+        @include border-radius(5px 5px 0 0);
+      }
       &:last-child {
         border-bottom: none;
+        @include border-radius(0 0 5px 5px);
       }
       @include box-sizing;
       @include clearfix;
       &:hover {
-        box-shadow: 0 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
+        z-index: 5;
+        box-shadow: 0px 0px 6px 1px rgba(118, 118, 118, 0.75);
       }
       &:active {
-        box-shadow: 0 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
+        z-index: 5;
+        box-shadow: 0px 0px 6px 1px rgba(118, 118, 118, 0.75);
       }
     }
   }
@@ -165,7 +170,6 @@
 
 // Стили для вида list
 .list {
-  overflow: hidden;
   &.product {
     border: 1px solid #dee1e4;
     @include border-radius(5px);
@@ -177,15 +181,21 @@
       font-size: 14px;
       font-family: 'open_sansregular';
       border-bottom: 1px solid #dee1e4;
+      @include box-sizing;
+      &:first-child {
+        @include border-radius(5px 5px 0 0);
+      }
       &:last-child {
         border-bottom: none;
+        @include border-radius(0 0 5px 5px);
       }
-      @include box-sizing;
       &:hover {
-        box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
+        z-index: 5;
+        box-shadow: 0px 0px 6px 1px rgba(118, 118, 118, 0.75);
       }
       &:active {
-        box-shadow: 0 1px 7.2px 0.8px rgba(153, 153, 153, 0.75);
+        z-index: 5;
+        box-shadow: 0px 0px 6px 1px rgba(118, 118, 118, 0.75);
       }
     }
   }
@@ -255,7 +265,7 @@
   font-family: 'open_sansbold';
   border: none;
   &:hover {
-    background: lighten(#f60, 5%);
+    background: darken(#f60, 3%);
   }
 }
 

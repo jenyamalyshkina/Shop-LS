@@ -75,6 +75,9 @@
 .reset-filter {
   color: #5db2fc;
   text-decoration: underline;
+  &:hover {
+    color: darken(#5db2fc, 10%);
+  }
 }
 
 .brand__item, .availability__item, .os__item {
@@ -156,6 +159,10 @@
 .violet { background-color: #9870ad; }
 .pink { background-color: #dc78ad; }
 .brown { background-color: #7f401d; }
+
+.choosen-color {
+  border: 2px solid #f60;
+}
 
 .price-range {
   &__field {

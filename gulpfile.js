@@ -29,7 +29,7 @@ gulp.task('sass-compile', function () {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(concat('main.min.css'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('prod/css'));
@@ -42,7 +42,7 @@ gulp.task('min-js', function() {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(concat('main.min.js'))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('prod/js/'));
 });

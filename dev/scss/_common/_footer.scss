@@ -94,4 +94,7 @@
   font-family: 'open_sansregular';
   color: white;
   text-decoration: underline;
+  &:hover {
+    color: darken(white, 15%);
+  }
 }

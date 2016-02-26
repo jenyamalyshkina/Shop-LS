@@ -62,28 +62,31 @@
   color: #333;
   position: relative;
   padding-left: 20px;
+  &:hover {
+    color: lighten(#333, 20%);
+  }
 }
 
 .map__link {
   font-size: 14px;
   font-family: 'open_sansregular';
-    &:before {
-      content: '';
-      left: 0;
-      @include vertical-center();
-      @include sprite($map-pin);
-    }
+  &:before {
+    content: '';
+    left: 0;
+    @include vertical-center();
+    @include sprite($map-pin);
+  }
 }
 
 .phone__link {
   font-size: 18px;
   font-family: 'open_sanssemibold';
-    &:before {
-      content: '';
-      left: -1px;
-      @include vertical-center();
-      @include sprite($telephone);
-    }
+  &:before {
+    content: '';
+    left: -1px;
+    @include vertical-center();
+    @include sprite($telephone);
+  }
 }
 
 .header {
@@ -105,8 +108,7 @@
   margin: 0;
   width: 289px;
   height: 32px;
-  line-height: 32px;
-  padding-left: 8px;
+  padding: 0 15px;
   outline: none;
   border: 1px solid #dee1e4;
   @include border-radius(3px);
@@ -114,7 +116,8 @@
 }
 
 @include placeholder {
-  padding-left: 8px;
+  line-height: 14px;
+  padding: 2px 0;
   font-size: 14px;
   font-family: 'open_sanslight';
   color: #7f7f7f;
@@ -131,6 +134,9 @@
   font-size: 16px;
   color: white;
   @include border-radius(0 3px 3px 0);
+  &:hover {
+    background: darken(#f60, 3%);
+  }
 }
 
 .header__info {
