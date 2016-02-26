@@ -3,11 +3,11 @@
     span.catalog-view_text Вид каталога
     ul.catalog-view
       li.catalog-view__item
-        a(href="#").catalog-view__link.catalog-view__link_piclist pic
+        a(href="#" data-class="piclist").catalog-view__link.catalog-view__link_piclist pic
       li.catalog-view__item
-        a(href="#").catalog-view__link.catalog-view__link_table.active table
+        a(href="#" data-class="table").catalog-view__link.catalog-view__link_table.active table
       li.catalog-view__item
-        a(href="#").catalog-view__link.catalog-view__link_list list
+        a(href="#" data-class="list").catalog-view__link.catalog-view__link_list list
   .sortby
     label(for="select-field").sortby__label Сортировать по
     select(id="select-field").sortby__select

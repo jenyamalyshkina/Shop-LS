@@ -33,7 +33,6 @@
 }
 
 .basic-filters__item {
-  padding: 10px 15px 20px 25px;
   border-bottom: 1px solid #dee1e4;
   &:last-child {
    border-bottom: none;
@@ -43,29 +42,30 @@
 .basic-filters__link-trigger {
   position: relative;
   display: block;
+  margin: 0;
+  padding: 15px 25px;
   font-family: 'open_sanssemibold';
   color: #333;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .arrow-up {
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 5px;
-    @include sprite($big-arrow-up);
+  display: block;
+  right: 11px;
+  @include sprite($big-arrow-up);
+  @include vertical-center;
 }
 
 .arrow-down {
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 5px;
-    @include sprite($big-arrow-down);
+  display: block;
+  right: 11px;
+  @include sprite($big-arrow-down);
+  @include vertical-center;
 }
 
 .accordeon__inner {
-  margin-top: 15px;
+  padding: 10px 25px 25px 25px;
 }
 
 .availability__item:last-child {

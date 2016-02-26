@@ -9,26 +9,29 @@ $(document).ready(function() {
   var accordeon = function () {
 
 // Аккордеон
-    function trigger() {
+     function trigger() {
 
       var trigger = $('.basic-filters__link-trigger');
 
       trigger.prepend('<i class="arrow-up arrow"></i>');
       $('.arrow').hide();
 
-      trigger.hover(function() {
-                      $('.arrow',this).show()
-                    }, function() {
-                      $('.arrow',this).hide()
-                    });
-
-      trigger.click(function(event){
-        event.preventDefault();
-        $('.arrow',this).toggleClass('arrow-down');
+      trigger.click(function() {
+        $('.arrow',this).toggleClass('arrow-down arrow-up');
         $(this).next('.accordeon__inner').slideToggle(200);
       });
-    };
 
+      trigger.hover(function() {
+        $('.arrow', this).show();
+          if ($('.arrow', this).hasClass('arrow-down')) {
+            $(this).css('background', '#d9e5ea');
+          };
+      }, function() {
+          $('.arrow', this).hide();
+          $(this).css('background', 'white');
+      });
+
+    };
     // Сброс фильтров
     function reset() {
 
@@ -47,5 +50,5 @@ $(document).ready(function() {
       trigger: trigger,
       reset: reset
     };
-};
 
+};

@@ -8,11 +8,13 @@
 
 .breadcrumbs__item {
   display: inline-block;
-  margin-right: 5px;
+  position: relative;
+  margin-right: 16px;
   &:after {
     content: '>';
     padding-left: 5px;
     font-size: 12px;
+    @include vertical-center;
   }
   &:last-child {
     &:after {
