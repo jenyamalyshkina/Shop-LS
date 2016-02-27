@@ -16,8 +16,9 @@ $(document).ready(function() {
       trigger.prepend('<i class="arrow-up arrow"></i>');
       $('.arrow').hide();
 
-      trigger.click(function() {
-        $('.arrow',this).toggleClass('arrow-down arrow-up');
+      trigger.click(function(event) {
+        event.preventDefault();
+        $(this).next('.accordeon__inner').stop(true, true).slideToggle(200);
         $(this).next('.accordeon__inner').slideToggle(200);
       });
 

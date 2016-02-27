@@ -94,6 +94,8 @@
 }
 
 .header__logo {
+  max-width: 238px;
+  max-height: 36px;
   @include vertical-center();
 }
 

@@ -7,11 +7,12 @@ $(document).ready(function() {
 function color() {
   $('.color__link').click(function(event) {
     event.preventDefault();
-      if ($(this).hasClass('choosen-color')) {
-        $(this).removeClass('choosen-color');
+    var $this = $(this);
+      if ($this.hasClass('choosen-color')) {
+        $this.removeClass('choosen-color');
       }
       else {
-        $(this).addClass('choosen-color')
+        $this.addClass('choosen-color')
       };
  });
 };
