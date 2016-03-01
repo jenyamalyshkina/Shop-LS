@@ -8,6 +8,7 @@
   padding-top: 35px;
   margin-top: -220px;
   background: url("../img/bg/footer-bg.jpg");
+  @include box-sizing;
 
   &__content {
     position: relative;

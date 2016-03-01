@@ -4,7 +4,7 @@
 }
 
 .filters__price-level-filter {
-  margin-bottom: 33px;
+  margin-bottom: 39px;
 }
 
 .price-level-filter, .basic-filters {
@@ -21,7 +21,7 @@
 
 .price-level-filter__link {
   display: block;
-  padding: 15px 26px;
+  padding: 13px 26px;
   color: #7f7f7f;
   &_active {
     background-color: #d9e5ea;
@@ -43,11 +43,13 @@
   position: relative;
   display: block;
   margin: 0;
-  padding: 15px 25px;
+  padding: 13px 25px;
   font-family: 'open_sanssemibold';
   color: #333;
   font-size: 16px;
   cursor: pointer;
+   -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .arrow-up {
@@ -65,7 +67,7 @@
 }
 
 .accordeon__inner {
-  padding: 10px 25px 25px 25px;
+  padding: 1px 25px 22px 27px;
 }
 
 .availability__item:last-child {

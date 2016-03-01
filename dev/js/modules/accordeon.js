@@ -18,8 +18,8 @@ $(document).ready(function() {
 
       trigger.click(function(event) {
         event.preventDefault();
+        $('.arrow',this).toggleClass('arrow-down arrow-up');
         $(this).next('.accordeon__inner').stop(true, true).slideToggle(200);
-        $(this).next('.accordeon__inner').slideToggle(200);
       });
 
       trigger.hover(function() {
@@ -29,7 +29,7 @@ $(document).ready(function() {
           };
       }, function() {
           $('.arrow', this).hide();
-          $(this).css('background', 'white');
+          $(this).css('background', 'inherit');
       });
 
     };

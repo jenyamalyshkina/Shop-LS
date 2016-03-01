@@ -179,7 +179,9 @@
 .menu_top__list, .menu_bottom__list {
   font-size: 0;
 }
-
+.menu_top__list {
+  margin-left: 10px;
+}
 .menu_top__item {
   display: inline-block;
 }

@@ -1,6 +1,6 @@
 .content__main {
   float: right;
-  margin-bottom: 33px;
+  margin-bottom: 28px;
 }
 
 .main {
@@ -8,7 +8,7 @@
 }
 
 .product {
-  margin-bottom: 60px;
+  margin-bottom: 47px;
 }
 
 // Стили для вида table
@@ -22,7 +22,7 @@
       min-height: 513px;
       margin-right: 19px;
       margin-bottom: 17px;
-      padding: 20px 10px;
+      padding: 20px 10px 18px 10px;
       font-size: 14px;
       font-family: 'open_sansregular';
       text-align: center;
@@ -44,20 +44,21 @@
   }
   &.item {
     &__image {
-      margin: 0 auto 10px;
+      margin: 0 auto 7px auto;
     }
     &__name {
       min-height: 30px;
-      margin-bottom: 7px;
+      margin-bottom: 12px;
     }
     &__charact {
        margin-bottom: 7px;
-      .charact__line { @include clearfix; height: 21px; }
+      .charact__line { @include clearfix; height: 20px; }
       .charact__line:nth-child(odd) {
         background: #e6e6e6;
       }
       .line__text_left {
         float: left;
+        padding-left: 2px;
       }
       .line__text_right {
         float: right;
@@ -69,13 +70,13 @@
     &__presence {
       float: left;
       width: 85px;
-      line-height: 33px;
+      line-height: 30px;
     }
     &__info {
       display: none;
     }
     &__ratio {
-      margin-bottom: 10px;
+      margin-bottom: 2px;
     }
     &__price {
       margin-bottom: 7px;
@@ -312,7 +313,7 @@
   width: 138px;
   &__big {
     width: 136px;
-    height: 136px;
+    height: 134px;
     background-color: white;
     border: 1px solid #dee1e4;
     border-radius: 2px;
@@ -320,8 +321,8 @@
     position: relative;
     cursor: pointer;
     &-pic {
-        display: block;
-        @include absolute-center;
+      display: block;
+      @include absolute-center;
     }
   }
   &__item {

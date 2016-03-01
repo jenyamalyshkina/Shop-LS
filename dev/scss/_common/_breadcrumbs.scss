@@ -18,6 +18,7 @@
     @include vertical-center;
   }
   &:first-child {
+    padding-left: 0;
     &:before {
       content: '';
     }
